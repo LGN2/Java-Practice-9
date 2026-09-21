@@ -10,6 +10,7 @@ public class RecursiveStringLength {
     }
 
     public static int length(String text) {
-        return 0;
+        if (text.isEmpty()) return 0;
+        return 1 + length(text.substring(1));
     }
 }
