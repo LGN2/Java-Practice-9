@@ -9,7 +9,8 @@ public class RecursiveArraySum {
     }
 
     public static int sumArray(int[] numbers, int index) {
-        return 0;
+        if (index >= numbers.length) return 0;
+        return numbers[index] + sumArray(numbers, index + 1);
     }
 
     private static int[] readArray(Scanner scanner) {
