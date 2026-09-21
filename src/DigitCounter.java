@@ -14,6 +14,7 @@ public class DigitCounter {
     }
 
     public static int countDigits(long number) {
-        return 0;
+        if (number < 10) return 1;
+        return 1 + countDigits(number / 10);
     }
 }
