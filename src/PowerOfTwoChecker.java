@@ -10,6 +10,8 @@ public class PowerOfTwoChecker {
     }
 
     public static boolean isPowerOfTwo(long number) {
-        return false;
+        if (number == 1) return true;
+        if (number <= 0 || number % 2 != 0) return false;
+        return isPowerOfTwo(number / 2);
     }
 }
