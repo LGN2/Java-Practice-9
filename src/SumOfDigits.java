@@ -10,6 +10,8 @@ public class SumOfDigits {
     }
 
     public static long sumDigits(long number) {
-        return 0;
+        number = Math.abs(number);
+        if (number == 0) return 0;
+        return number % 10 + sumDigits(number / 10);
     }
 }
