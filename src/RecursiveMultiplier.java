@@ -17,6 +17,8 @@ public class RecursiveMultiplier {
     }
 
     public static int multiply(int firstNumber, int secondNumber) {
-        return 0;
+        if (secondNumber == 0) return 0;
+        if (secondNumber < 0) return -multiply(firstNumber, -secondNumber);
+        return firstNumber + multiply(firstNumber, secondNumber - 1);
     }
 }
