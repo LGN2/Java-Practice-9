@@ -13,6 +13,8 @@ public class CharacterCounter {
     }
 
     public static int countChar(String text, char target) {
-        return 0;
+        if (text.isEmpty()) return 0;
+        int currentMatch = text.charAt(0) == target ? 1 : 0;
+        return currentMatch + countChar(text.substring(1), target);
     }
 }
