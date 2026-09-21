@@ -15,6 +15,9 @@ public class CountDownUp {
     }
 
     public static void countDownUp(int number) {
-        System.out.println("Recursive countdown and count-up will be added next.");
+        if (number <= 0) return;
+        System.out.println(number);
+        countDownUp(number - 1);
+        if (number > 1) System.out.println(number);
     }
 }
