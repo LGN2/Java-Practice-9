@@ -9,7 +9,9 @@ public class RecursiveArrayMaximum {
     }
 
     public static int findMax(int[] numbers, int index) {
-        return 0;
+        if (index == numbers.length - 1) return numbers[index];
+        int maximumOfRest = findMax(numbers, index + 1);
+        return numbers[index] > maximumOfRest ? numbers[index] : maximumOfRest;
     }
 
     private static int[] readArray(Scanner scanner) {
