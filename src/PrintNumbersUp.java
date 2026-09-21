@@ -14,6 +14,8 @@ public class PrintNumbersUp {
     }
 
     public static void printUp(int number) {
-        System.out.println("Recursive number printing will be added next.");
+        if (number <= 0) return;
+        printUp(number - 1);
+        System.out.println(number);
     }
 }
