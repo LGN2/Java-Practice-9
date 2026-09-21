@@ -10,6 +10,9 @@ public class RecursiveEvenChecker {
     }
 
     public static boolean isEven(int number) {
-        return false;
+        if (number < 0) return isEven(-number);
+        if (number == 0) return true;
+        if (number == 1) return false;
+        return isEven(number - 2);
     }
 }
