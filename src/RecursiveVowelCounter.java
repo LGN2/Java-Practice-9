@@ -10,7 +10,10 @@ public class RecursiveVowelCounter {
     }
 
     public static int countVowels(String text) {
-        return 0;
+        if (text.isEmpty()) return 0;
+        char character = Character.toLowerCase(text.charAt(0));
+        int currentVowel = isVowel(character) ? 1 : 0;
+        return currentVowel + countVowels(text.substring(1));
     }
 
     private static boolean isVowel(char character) {
